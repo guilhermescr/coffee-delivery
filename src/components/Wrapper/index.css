@@ -1,0 +1,12 @@
+.colorful-background {
+  background: url('../../assets/Images/backgrounds/intro-background.svg') center
+    no-repeat fixed;
+  background-size: cover;
+  filter: blur(5rem);
+  left: 0;
+  min-height: calc(100vh - 6.5rem);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
