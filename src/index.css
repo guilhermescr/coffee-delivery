@@ -17,6 +17,10 @@ body,
   width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fafafa;
 }
@@ -28,4 +32,12 @@ h4,
 h5,
 h6 {
   font-family: 'Baloo 2', cursive;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #403937;
 }

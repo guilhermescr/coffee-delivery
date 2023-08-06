@@ -19,7 +19,7 @@ export default function Wrapper({
 
   return (
     <div
-      className={`${customBackgroundStyles} ${customCSSStyles} mx-auto max-w-[90rem] w-full relative`.trim()}
+      className={`${customBackgroundStyles} mx-auto max-w-[90rem] w-full ${customCSSStyles}`.trim()}
     >
       {customBackground && <div className="colorful-background"></div>}
       {children}

@@ -13,12 +13,12 @@ export default function Intro() {
       'flex flex-wrap gap-8 items-center justify-between min-h-[calc(100vh-6.5rem)] md:gap-4 lg:flex-nowrap',
     header: {
       styles: 'max-w-xl mb-6 md:mb-[4.12rem]',
-      h1: 'font-extrabold text-3xl mb-2 md:mb-4 md:text-5xl',
+      h1: 'font-extrabold leading-[130%] text-3xl mb-2 md:mb-4 md:text-5xl md:leading-[130%]',
       p: 'text-lg max-w-md md:text-xl',
     },
     ourAdvantages:
       'our-advantages grid grid-cols-1  gap-5 max-w-xl md:grid-cols-2',
-    illustration: 'mx-auto w-3/4 md:max-w-xs lg:max-w-sm lg:mx-0',
+    illustration: 'mx-auto w-3/4 md:max-w-xs lg:max-w-md lg:mx-0',
   };
 
   return (

@@ -8,14 +8,17 @@ type Props = {
 
 export default function Advantage({
   children,
-  backgroundColor,
+  backgroundColor = '#545454',
   advantageDescription,
 }: Props) {
-  const advantageIconStyles: string = `bg-[${backgroundColor}] flex items-center justify-center p-2 text-white rounded-[62.5rem]`;
-
   return (
     <div className="advantage flex gap-3 items-center">
-      <span className={advantageIconStyles}>{children}</span>{' '}
+      <span
+        className="flex items-center justify-center p-2 text-white rounded-[62.5rem]"
+        style={{ backgroundColor }}
+      >
+        {children}
+      </span>{' '}
       {advantageDescription}
     </div>
   );

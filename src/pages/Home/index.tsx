@@ -1,17 +1,17 @@
 import Wrapper from '../../components/Wrapper';
 
-import Header from '../../layouts/Header';
 import Intro from './components/Intro';
+import OurCoffees from './components/OurCoffees';
 
 export default function Home() {
   return (
     <>
-      <Wrapper>
-        <Header />
+      <Wrapper customCSS="relative" customBackground={true}>
+        <Intro />
       </Wrapper>
 
-      <Wrapper customBackground={true}>
-        <Intro />
+      <Wrapper customCSS="pb-[9.81rem]">
+        <OurCoffees />
       </Wrapper>
     </>
   );
