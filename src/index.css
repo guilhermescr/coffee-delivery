@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&display=swap');
+* {
+  line-height: 130%;
+}
 
 *:not(h1, h2, h3, h4, h5, h6) {
-  /* background-color: red; */
+  font-family: 'Roboto', sans-serif;
 }
 
 html,
