@@ -1,62 +1,74 @@
 import Wrapper from '../../../../components/Wrapper';
+import Advantage from './components/Advantage';
 
 import { FaShoppingCart } from 'react-icons/fa';
-import { PiCoffeeFill, PiTimerLight } from 'react-icons/pi';
+import { PiCoffeeFill, PiTimerFill } from 'react-icons/pi';
 import { BiSolidPackage } from 'react-icons/bi';
 
 import CoffeeIllustration from '../../../../assets/Images/illustrations/intro-illustration.svg';
 
 export default function Intro() {
-  const advantageIconStyles: string =
-    'flex items-center justify-center p-2 text-white rounded-[62.5rem]';
+  const styles = {
+    introSection:
+      'flex flex-wrap gap-8 items-center justify-between min-h-[calc(100vh-6.5rem)] md:gap-4 lg:flex-nowrap',
+    header: {
+      styles: 'max-w-xl mb-6 md:mb-[4.12rem]',
+      h1: 'font-extrabold text-3xl mb-2 md:mb-4 md:text-5xl',
+      p: 'text-lg max-w-md md:text-xl',
+    },
+    ourAdvantages:
+      'our-advantages grid grid-cols-1  gap-5 max-w-xl md:grid-cols-2',
+    illustration: 'mx-auto w-3/4 md:max-w-xs lg:max-w-sm lg:mx-0',
+  };
 
   return (
     <Wrapper>
-      <section className="flex flex-wrap items-center justify-between">
+      <section className={styles.introSection}>
         <section className="content">
-          <header className="max-w-xl mb-[4.12rem]">
-            <h1 className="font-extrabold text-5xl mb-4">
+          <header className={styles.header.styles}>
+            <h1 className={styles.header.h1}>
               Find the perfect coffee for any time of the day
             </h1>
 
-            <p className="text-xl">
+            <p className={styles.header.p}>
               With Coffee Delivery, you get your coffee wherever you are,
               anytime.
             </p>
           </header>
 
-          <section className="our-advantages grid grid-cols-2 gap-5 max-w-xl">
-            <div className="advantage flex gap-3 items-center">
-              <span className={`bg-[#C47F17] ${advantageIconStyles}`}>
-                <FaShoppingCart />
-              </span>{' '}
-              Simple and secure purchase.
-            </div>
+          <section className={styles.ourAdvantages}>
+            <Advantage
+              backgroundColor="#C47F17"
+              advantageDescription="Simple and secure purchase."
+            >
+              <FaShoppingCart />
+            </Advantage>
 
-            <div className="advantage flex gap-3 items-center">
-              <span className={`bg-[#574F4D] ${advantageIconStyles}`}>
-                <BiSolidPackage />
-              </span>{' '}
-              Packaging keeps the coffee intact.
-            </div>
+            <Advantage
+              backgroundColor="#574F4D"
+              advantageDescription="Packaging keeps the coffee intact."
+            >
+              <BiSolidPackage />
+            </Advantage>
 
-            <div className="advantage flex gap-3 items-center">
-              <span className={`bg-[#DBAC2C] ${advantageIconStyles}`}>
-                <PiTimerLight />
-              </span>{' '}
-              Fast and tracked delivery.
-            </div>
+            <Advantage
+              backgroundColor="#DBAC2C"
+              advantageDescription="Fast and tracked delivery."
+            >
+              <PiTimerFill />
+            </Advantage>
 
-            <div className="advantage flex gap-3 items-center">
-              <span className={`bg-[#8047F8] ${advantageIconStyles}`}>
-                <PiCoffeeFill />
-              </span>{' '}
-              Coffee arrives fresh to you.
-            </div>
+            <Advantage
+              backgroundColor="#8047F8"
+              advantageDescription="Coffee arrives fresh to you."
+            >
+              <PiCoffeeFill />
+            </Advantage>
           </section>
         </section>
 
         <img
+          className={styles.illustration}
           src={CoffeeIllustration}
           alt="Illustration of a cup of coffee with coffee beans"
         />
