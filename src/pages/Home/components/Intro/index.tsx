@@ -5,7 +5,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { PiCoffeeFill, PiTimerFill } from 'react-icons/pi';
 import { BiSolidPackage } from 'react-icons/bi';
 
-import CoffeeIllustration from '../../../../assets/Images/illustrations/intro-illustration.svg';
+import CoffeeIllustration from '../../../../assets/Images/illustrations/intro-illustration.png';
 
 export default function Intro() {
   const styles = {

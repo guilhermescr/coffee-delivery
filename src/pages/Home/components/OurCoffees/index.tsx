@@ -4,20 +4,20 @@ import Coffee from './components/Coffee';
 
 import { CoffeeInterface } from '../../../../interfaces/products/coffees';
 
-import Espresso from '../../../../assets/Images/coffees/expresso-tradicional.svg';
-import AmericanEspresso from '../../../../assets/Images/coffees/expresso-americano.svg';
-import CreamyEspresso from '../../../../assets/Images/coffees/expresso-cremoso.svg';
-import IcedEspresso from '../../../../assets/Images/coffees/expresso-gelado.svg';
-import CoffeeWithMilk from '../../../../assets/Images/coffees/café-com-leite.svg';
-import Latte from '../../../../assets/Images/coffees/latte.svg';
-import Capuccino from '../../../../assets/Images/coffees/capuccino.svg';
-import Macchiato from '../../../../assets/Images/coffees/macchiato.svg';
-import Mocaccino from '../../../../assets/Images/coffees/mocaccino.svg';
-import HotChocolate from '../../../../assets/Images/coffees/chocolate-quente.svg';
-import Cuban from '../../../../assets/Images/coffees/cubano.svg';
-import Hawaiian from '../../../../assets/Images/coffees/havaiano.svg';
-import Arabic from '../../../../assets/Images/coffees/árabe.svg';
-import Irish from '../../../../assets/Images/coffees/irlandês.svg';
+import Espresso from '../../../../assets/Images/coffees/expresso-tradicional.png';
+import AmericanEspresso from '../../../../assets/Images/coffees/expresso-americano.png';
+import CreamyEspresso from '../../../../assets/Images/coffees/expresso-cremoso.png';
+import IcedEspresso from '../../../../assets/Images/coffees/expresso-gelado.png';
+import CoffeeWithMilk from '../../../../assets/Images/coffees/café-com-leite.png';
+import Latte from '../../../../assets/Images/coffees/latte.png';
+import Capuccino from '../../../../assets/Images/coffees/capuccino.png';
+import Macchiato from '../../../../assets/Images/coffees/macchiato.png';
+import Mocaccino from '../../../../assets/Images/coffees/mocaccino.png';
+import HotChocolate from '../../../../assets/Images/coffees/chocolate-quente.png';
+import Cuban from '../../../../assets/Images/coffees/cubano.png';
+import Hawaiian from '../../../../assets/Images/coffees/havaiano.png';
+import Arabic from '../../../../assets/Images/coffees/árabe.png';
+import Irish from '../../../../assets/Images/coffees/irlandês.png';
 
 export default function OurCoffees() {
   const coffees: CoffeeInterface[] = [
