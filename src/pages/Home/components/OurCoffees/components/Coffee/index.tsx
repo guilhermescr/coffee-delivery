@@ -3,23 +3,39 @@ import { CoffeeInterface } from '../../../../../../interfaces/products/coffees';
 import { convertDotToComma } from '../../../../../../utilities';
 
 import { FaShoppingCart } from 'react-icons/fa';
+import { useCartStore } from 'src/hooks/useCartStore';
 
 export default function Coffee({
+  id,
   coffeeSrc,
   coffeeName,
   description,
   tags,
   price = 9.9,
+  quantity,
 }: CoffeeInterface) {
   const [productQuantity, setProductQuantity] = useState(1);
+  const { productsData, addToCart } = useCartStore();
 
   function increaseProductQuantity() {
-    setProductQuantity(productQuantity + 1);
+    if (productQuantity < quantity) {
+      setProductQuantity(productQuantity + 1);
+    }
   }
 
   function decreaseProductQuantity() {
     if (productQuantity > 1) {
       setProductQuantity(productQuantity - 1);
+    }
+  }
+
+  function addProductToCart() {
+    for (let index = 0; index < productQuantity; index++) {
+      const product = productsData.find((productData) => productData.id === id);
+
+      if (product) {
+        addToCart(product);
+      }
     }
   }
 
@@ -78,7 +94,10 @@ export default function Coffee({
             </button>
           </div>
 
-          <button className="bg-[#4B2995] p-2 text-white rounded-md">
+          <button
+            className="bg-[#4B2995] p-2 text-white rounded-md"
+            onClick={addProductToCart}
+          >
             <FaShoppingCart />
           </button>
         </div>

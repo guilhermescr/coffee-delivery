@@ -1,7 +1,7 @@
 import CoffeeDeliveryLogo from '../../assets/Images/logos/coffee-delivery-logo.svg';
 
-import { FaShoppingCart } from 'react-icons/fa';
 import { MdLocationOn } from 'react-icons/md';
+import Cart from './components/Cart';
 
 export default function Header() {
   return (
@@ -14,9 +14,7 @@ export default function Header() {
           <span className="text-[#4B2995] text-sm">Salvador, BA</span>
         </p>
 
-        <button className="bg-[#F1E9C9] rounded-md p-2">
-          <FaShoppingCart className="text-[#C47F17] text-[1.375rem]" />
-        </button>
+        <Cart />
       </div>
     </header>
   );
