@@ -1,14 +1,13 @@
-import { useState } from 'react';
 import './index.css';
 
 import Coffee from './components/Coffee';
 
-// import { CoffeeInterface } from '../../../../interfaces/products/coffees';
+import { CoffeeInterface } from 'src/interfaces/products/coffees';
 
 import coffeesData from '../../../../coffees.json';
 
 export default function OurCoffees() {
-  const [coffees, setCoffees] = useState(coffeesData);
+  const coffees: CoffeeInterface[] = coffeesData;
 
   return (
     <section>
