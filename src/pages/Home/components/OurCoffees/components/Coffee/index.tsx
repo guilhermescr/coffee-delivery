@@ -42,13 +42,13 @@ export default function Coffee({
   console.log(coffeeSrc);
   return (
     <article
-      className="bg-[#F3F2F2] flex flex-col items-center justify-between pt-24 pb-5 px-4 relative"
+      className="bg-[#F3F2F2] flex flex-col items-center justify-between pt-20 pb-5 px-4 relative"
       style={{
         borderRadius: '0.375rem 2.25rem',
       }}
     >
       <img
-        className="absolute left-1/2 -top-4 -translate-x-1/2"
+        className="absolute left-1/2 -top-4 -translate-x-1/2 w-24"
         src={coffeeSrc}
         alt={description}
       />

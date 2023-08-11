@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "coffeeSrc": "https://coffee-delivery-eosin.vercel.app/coffees//expresso-tradicional.png",
+    "coffeeSrc": "https://ignite-challenges-dfgt.vercel.app/assets/img/coffees/expressoTradicional.png",
     "coffeeName": "Espresso",
     "description": "Traditional coffee made with hot water and ground beans",
     "tags": ["Traditional"],
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "coffeeSrc": "https://coffee-delivery-eosin.vercel.app/coffees//expresso-americano.png",
+    "coffeeSrc": "https://ignite-challenges-dfgt.vercel.app/assets/img/coffees/Americano.png",
     "coffeeName": "American Espresso",
     "description": "Diluted espresso, less intense than the traditional one",
     "tags": ["Traditional"],
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "coffeeSrc": "src/assets/Images/coffees/expresso-cremoso.png",
+    "coffeeSrc": "https://ignite-challenges-dfgt.vercel.app/assets/img/coffees/Expresso%20Cremoso.png",
     "coffeeName": "Creamy Espresso",
     "description": "Traditional espresso with creamy foam",
     "tags": ["Traditional"],
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "coffeeSrc": "src/assets/Images/coffees/expresso-gelado.png",
+    "coffeeSrc": "https://ignite-challenges-dfgt.vercel.app/assets/img/coffees/Caf%C3%A9%20Gelado.png",
     "coffeeName": "Iced Espresso",
     "description": "Drink prepared with espresso coffee and ice cubes",
     "tags": ["Traditional", "Iced"],
@@ -37,7 +37,7 @@
   },
   {
     "id": 5,
-    "coffeeSrc": "src/assets/Images/coffees/café-com-leite.png",
+    "coffeeSrc": "https://ignite-challenges-dfgt.vercel.app/assets/img/coffees/Caf%C3%A9%20com%20Leite.png",
     "coffeeName": "Coffee With Milk",
     "description": "Half and half traditional espresso with steamed milk",
     "tags": ["Traditional", "With Milk"],
@@ -46,7 +46,7 @@
   },
   {
     "id": 6,
-    "coffeeSrc": "src/assets/Images/coffees/latte.png",
+    "coffeeSrc": "https://ignite-challenges-dfgt.vercel.app/assets/img/coffees/Latte.png",
     "coffeeName": "Latte",
     "description": "A shot of espresso with much milk and creamy foam",
     "tags": ["Traditional", "With Milk"],
@@ -55,7 +55,7 @@
   },
   {
     "id": 7,
-    "coffeeSrc": "src/assets/Images/coffees/capuccino.png",
+    "coffeeSrc": "https://ignite-challenges-dfgt.vercel.app/assets/img/coffees/Capuccino.png",
     "coffeeName": "Capuccino",
     "description": "Cinnamon drink made of coffee, milk and foam",
     "tags": ["Traditional", "With Milk"],
@@ -64,7 +64,7 @@
   },
   {
     "id": 8,
-    "coffeeSrc": "src/assets/Images/coffees/macchiato.png",
+    "coffeeSrc": "https://ignite-challenges-dfgt.vercel.app/assets/img/coffees/Macchiato.png",
     "coffeeName": "Macchiato",
     "description": "Espresso coffee mixed with a little hot milk and foam",
     "tags": ["Traditional", "With Milk"],
@@ -73,7 +73,7 @@
   },
   {
     "id": 9,
-    "coffeeSrc": "src/assets/Images/coffees/mocaccino.png",
+    "coffeeSrc": "https://ignite-challenges-dfgt.vercel.app/assets/img/coffees/Mochaccino.png",
     "coffeeName": "Mocaccino",
     "description": "Coffee with chocolate sauce, milk and foam",
     "tags": ["Traditional", "With Milk"],
@@ -82,7 +82,7 @@
   },
   {
     "id": 10,
-    "coffeeSrc": "src/assets/Images/coffees/chocolate-quente.png",
+    "coffeeSrc": "https://ignite-challenges-dfgt.vercel.app/assets/img/coffees/Chocolate%20Quente.png",
     "coffeeName": "Hot Chocolate",
     "description": "Chocolate dissolved in hot milk and coffee",
     "tags": ["Special", "With Milk"],
@@ -91,7 +91,7 @@
   },
   {
     "id": 11,
-    "coffeeSrc": "src/assets/Images/coffees/cubano.png",
+    "coffeeSrc": "https://ignite-challenges-dfgt.vercel.app/assets/img/coffees/Cubano.png",
     "coffeeName": "Cuban",
     "description": "Iced espresso drink with rum, cream and mint",
     "tags": ["Special", "Alcoholic", "Iced"],
@@ -100,7 +100,7 @@
   },
   {
     "id": 12,
-    "coffeeSrc": "src/assets/Images/coffees/havaiano.png",
+    "coffeeSrc": "https://ignite-challenges-dfgt.vercel.app/assets/img/coffees/Havaiano.png",
     "coffeeName": "Hawaiian",
     "description": "Sweet drink prepared with coffee and coconut milk",
     "tags": ["Special"],
@@ -109,7 +109,7 @@
   },
   {
     "id": 13,
-    "coffeeSrc": "src/assets/Images/coffees/árabe.png",
+    "coffeeSrc": "https://ignite-challenges-dfgt.vercel.app/assets/img/coffees/%C3%81rabe.png",
     "coffeeName": "Arabic",
     "description": "Drink prepared with Arabic coffee beans and spices",
     "tags": ["Special"],
@@ -118,7 +118,7 @@
   },
   {
     "id": 14,
-    "coffeeSrc": "src/assets/Images/coffees/irlandês.png",
+    "coffeeSrc": "https://ignite-challenges-dfgt.vercel.app/assets/img/coffees/Irland%C3%AAs.png",
     "coffeeName": "Irish",
     "description": "Drink of coffee, Irish whiskey, sugar and whipped cream",
     "tags": ["Special", "Alcoholic"],

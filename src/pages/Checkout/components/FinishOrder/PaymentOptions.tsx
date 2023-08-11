@@ -12,7 +12,7 @@ export default function PaymentOptions() {
   }
 
   return (
-    <section className="payment-options flex items-center gap-3">
+    <section className="payment-options flex flex-col items-center gap-3 md:flex-row">
       <PaymentOption
         paymentName="Credit Card"
         id="1"

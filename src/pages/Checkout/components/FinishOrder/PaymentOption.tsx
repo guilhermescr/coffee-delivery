@@ -26,7 +26,7 @@ export default function PaymentOption({
 
   return (
     <button
-      className={`${paymentOptionCustomStyles} flex items-center rounded-md transition-all p-4 w-1/3`}
+      className={`${paymentOptionCustomStyles} flex items-center rounded-md transition-all p-4 w-full md:w-1/3`}
       id={id}
       onClick={handleClick}
     >
