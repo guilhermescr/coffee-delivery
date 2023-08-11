@@ -39,6 +39,7 @@ export default function Coffee({
     }
   }
 
+  console.log(coffeeSrc);
   return (
     <article
       className="bg-[#F3F2F2] flex flex-col items-center justify-between pt-24 pb-5 px-4 relative"

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "coffeeSrc": "src/assets/Images/coffees/expresso-tradicional.png",
+    "coffeeSrc": "https://coffee-delivery-eosin.vercel.app/coffees//expresso-tradicional.png",
     "coffeeName": "Espresso",
     "description": "Traditional coffee made with hot water and ground beans",
     "tags": ["Traditional"],
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "coffeeSrc": "src/assets/Images/coffees/expresso-americano.png",
+    "coffeeSrc": "https://coffee-delivery-eosin.vercel.app/coffees//expresso-americano.png",
     "coffeeName": "American Espresso",
     "description": "Diluted espresso, less intense than the traditional one",
     "tags": ["Traditional"],
