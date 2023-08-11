@@ -4,7 +4,7 @@ import Coffee from './components/Coffee';
 
 import { CoffeeInterface } from 'src/interfaces/products/coffees';
 
-import coffeesData from '../../../../coffees.json';
+import coffeesData from 'src/coffees.json';
 
 export default function OurCoffees() {
   const coffees: CoffeeInterface[] = coffeesData;

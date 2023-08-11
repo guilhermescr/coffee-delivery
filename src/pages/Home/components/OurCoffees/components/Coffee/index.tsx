@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { CoffeeInterface } from '../../../../../../interfaces/products/coffees';
-import { convertDotToComma } from '../../../../../../utilities';
+import { CoffeeInterface } from 'src/interfaces/products/coffees';
+import { convertDotToComma } from 'src/utilities';
 
 import { FaShoppingCart } from 'react-icons/fa';
 import { useCartStore } from 'src/hooks/useCartStore';

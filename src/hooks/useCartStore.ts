@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-import { CoffeeInterface } from '../interfaces/products/coffees';
+import { CoffeeInterface } from 'src/interfaces/products/coffees';
 
 import coffeesData from 'src/coffees.json';
 

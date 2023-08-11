@@ -1,11 +1,11 @@
-import Wrapper from '../../../../components/Wrapper';
+import Wrapper from 'src/components/Wrapper';
 import Advantage from './components/Advantage';
 
 import { FaShoppingCart } from 'react-icons/fa';
 import { PiCoffeeFill, PiTimerFill } from 'react-icons/pi';
 import { BiSolidPackage } from 'react-icons/bi';
 
-import CoffeeIllustration from '../../../../assets/Images/illustrations/intro-illustration.png';
+import CoffeeIllustration from 'src/assets/Images/illustrations/intro-illustration.png';
 
 export default function Intro() {
   const styles = {

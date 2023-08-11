@@ -1,4 +1,4 @@
-import Wrapper from '../../components/Wrapper';
+import Wrapper from 'src/components/Wrapper';
 
 import Intro from './components/Intro';
 import OurCoffees from './components/OurCoffees';

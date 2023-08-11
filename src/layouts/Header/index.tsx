@@ -1,4 +1,4 @@
-import CoffeeDeliveryLogo from '../../assets/Images/logos/coffee-delivery-logo.svg';
+import CoffeeDeliveryLogo from 'src/assets/Images/logos/coffee-delivery-logo.svg';
 
 import { MdLocationOn } from 'react-icons/md';
 import Cart from './components/Cart';

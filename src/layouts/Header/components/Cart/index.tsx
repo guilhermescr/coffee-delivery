@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useCartStore } from '../../../../hooks/useCartStore';
+import { useCartStore } from 'src/hooks/useCartStore';
 import { FaShoppingCart } from 'react-icons/fa';
 
 export default function Cart() {
