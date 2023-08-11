@@ -13,7 +13,7 @@ export default function Wrapper({
   customCSS,
 }: Props) {
   const customBackgroundStyles: string = !customBackground
-    ? 'px-6 md:px-40'
+    ? 'px-6 md:px-28'
     : '';
   const customCSSStyles: string = customCSS ?? '';
 

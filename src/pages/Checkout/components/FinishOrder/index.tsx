@@ -7,7 +7,7 @@ import FinishOrderSection from './FinishOrderSection';
 
 export default function FinishOrder() {
   return (
-    <section>
+    <section className="lg:max-w-xl">
       <h2 className="mb-[0.94rem] text-lg">Finish your order</h2>
 
       <FinishOrderSection

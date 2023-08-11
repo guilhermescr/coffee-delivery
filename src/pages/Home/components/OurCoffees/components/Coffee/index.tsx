@@ -4,6 +4,7 @@ import { convertDotToComma } from 'src/utilities';
 
 import { FaShoppingCart } from 'react-icons/fa';
 import { useCartStore } from 'src/hooks/useCartStore';
+import CounterForProductQuantity from './CounterForProductQuantity';
 
 export default function Coffee({
   id,
@@ -77,23 +78,11 @@ export default function Coffee({
         </div>
 
         <div className="actions flex items-center gap-2">
-          <div className="counter bg-[#E6E5E5] flex items-center justify-center gap-3 p-2 rounded-md">
-            <button
-              className="text-[#8047F8] font-bold hover:text-[#4b259c]"
-              onClick={decreaseProductQuantity}
-            >
-              &#x2013;
-            </button>
-
-            <span>{productQuantity}</span>
-
-            <button
-              className="text-[#8047F8] font-bold hover:text-[#4b259c]"
-              onClick={increaseProductQuantity}
-            >
-              +
-            </button>
-          </div>
+          <CounterForProductQuantity
+            productQuantity={productQuantity}
+            decreaseProductQuantity={decreaseProductQuantity}
+            increaseProductQuantity={increaseProductQuantity}
+          />
 
           <button
             className="bg-[#4B2995] p-2 text-white rounded-md"

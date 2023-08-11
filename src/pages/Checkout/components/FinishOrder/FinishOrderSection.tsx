@@ -16,7 +16,7 @@ export default function FinishOrderSection({
   customCSS,
 }: Props) {
   return (
-    <section className={`bg-[#F3F2F2] rounded-md p-10 max-w-2xl ${customCSS}`}>
+    <section className={`bg-[#F3F2F2] rounded-md p-10 ${customCSS}`}>
       <div className="flex gap-2 mb-8">
         <span>{icon}</span>
 

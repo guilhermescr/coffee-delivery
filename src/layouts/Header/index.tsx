@@ -1,12 +1,21 @@
-import CoffeeDeliveryLogo from 'src/assets/Images/logos/coffee-delivery-logo.svg';
-
+import { useNavigate } from 'react-router-dom';
 import { MdLocationOn } from 'react-icons/md';
+
 import Cart from './components/Cart';
 
+import CoffeeDeliveryLogo from 'src/assets/Images/logos/coffee-delivery-logo.svg';
+
 export default function Header() {
+  const navigate = useNavigate();
+
   return (
     <header className="flex items-center justify-between py-8">
-      <img src={CoffeeDeliveryLogo} alt="Coffee Delivery Logo" />
+      <img
+        className="cursor-pointer"
+        src={CoffeeDeliveryLogo}
+        alt="Coffee Delivery Logo"
+        onClick={() => navigate('/')}
+      />
 
       <div className="flex gap-3 items-center justify-end">
         <p className="bg-[#EBE5F9] rounded-md p-2 flex gap-1 items-center justify-center w-max">
