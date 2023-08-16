@@ -5,7 +5,7 @@
     "coffeeName": "Espresso",
     "description": "Traditional coffee made with hot water and ground beans",
     "tags": ["Traditional"],
-    "price": 9.9,
+    "price": 5.9,
     "quantity": 99
   },
   {
@@ -23,7 +23,7 @@
     "coffeeName": "Creamy Espresso",
     "description": "Traditional espresso with creamy foam",
     "tags": ["Traditional"],
-    "price": 9.9,
+    "price": 14.9,
     "quantity": 99
   },
   {
@@ -50,7 +50,7 @@
     "coffeeName": "Latte",
     "description": "A shot of espresso with much milk and creamy foam",
     "tags": ["Traditional", "With Milk"],
-    "price": 9.9,
+    "price": 12.9,
     "quantity": 99
   },
   {

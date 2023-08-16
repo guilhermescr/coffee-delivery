@@ -31,16 +31,16 @@ export default function Coffee({
   }
 
   function addProductToCart() {
-    for (let index = 0; index < productQuantity; index++) {
-      const product = productsData.find((productData) => productData.id === id);
+    const product = productsData.find((productData) => productData.id === id);
 
-      if (product) {
-        addToCart(product);
-      }
+    if (product) {
+      addToCart({
+        quantity: productQuantity,
+        product: product,
+      });
     }
   }
 
-  console.log(coffeeSrc);
   return (
     <article
       className="bg-[#F3F2F2] flex flex-col items-center justify-between pt-20 pb-5 px-4 relative"
