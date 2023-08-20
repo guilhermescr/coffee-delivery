@@ -1,12 +1,15 @@
+import { useState } from 'react';
 import { PiTrash } from 'react-icons/pi';
 import { useCartStore } from 'src/hooks/useCartStore';
+import CounterForProductQuantity from 'src/pages/Home/components/OurCoffees/components/Coffee/CounterForProductQuantity';
+import { convertDotToComma } from 'src/utilities';
 
 type SelectedCoffeeProps = {
   id: number;
   imgSrc: string;
   coffeeName: string;
-  quantity: number;
-  price: string;
+  amountInStock: number;
+  price: number;
   isFirstCoffee: boolean;
 };
 
@@ -14,10 +17,40 @@ export default function SelectedCoffee({
   id,
   imgSrc,
   coffeeName,
-  quantity,
+  amountInStock,
   price,
   isFirstCoffee = false,
 }: SelectedCoffeeProps) {
+  const { productsInCart, setAmountOfProducts, changeProductQuantity } =
+    useCartStore();
+  const selectedProduct = productsInCart.find(
+    (productInCart) => productInCart.product.id === id
+  )!;
+  const [productQuantity, setProductQuantity] = useState(
+    selectedProduct.quantity
+  );
+
+  function increaseProductQuantity() {
+    if (productQuantity < amountInStock) {
+      setProductQuantity(productQuantity + 1);
+      changeProductQuantity(id, true);
+      setAmountOfProducts();
+    }
+  }
+
+  function decreaseProductQuantity() {
+    if (productQuantity > 1) {
+      setProductQuantity(productQuantity - 1);
+      changeProductQuantity(id, false);
+      setAmountOfProducts();
+    }
+  }
+
+  function handleRemoveClick() {
+    removeFromCart(id);
+    setAmountOfProducts();
+  }
+
   const { removeFromCart } = useCartStore();
   const coffeeMargin = isFirstCoffee ? 'mb-6' : 'my-6';
 
@@ -37,31 +70,29 @@ export default function SelectedCoffee({
             {coffeeName}
           </h3>
 
-          <div className="actions grid grid-cols-2 mt-2 w-40">
-            <div className="counter bg-[#E6E5E5] flex items-center justify-center gap-3 p-2 rounded-md max-w-max">
-              <button className="text-[#8047F8] font-bold hover:text-[#4b259c]">
-                &#x2013;
-              </button>
-
-              <span>{quantity}</span>
-
-              <button className="text-[#8047F8] font-bold hover:text-[#4b259c]">
-                +
-              </button>
-            </div>
+          <div className="actions grid grid-cols-2 gap-2 mt-2 w-40">
+            <CounterForProductQuantity
+              productQuantity={productQuantity}
+              increaseProductQuantity={increaseProductQuantity}
+              decreaseProductQuantity={decreaseProductQuantity}
+            />
 
             <button
-              className="bg-[#E6E5E5] flex items-center gap-1 p-2 rounded-md"
-              onClick={() => removeFromCart(id)}
+              className="bg-[#E6E5E5] flex items-center gap-1 p-2 rounded-md w-max"
+              onClick={handleRemoveClick}
             >
-              <PiTrash className="text-[#8047F8]" />{' '}
+              <span className="text-lg">
+                <PiTrash className="text-[#8047F8]" />
+              </span>{' '}
               <span className="text-xs uppercase text-[#574F4D]">Remove</span>
             </button>
           </div>
         </div>
       </div>
 
-      <p className="font-bold text-[#574F4D]">R${price}</p>
+      <p className="price-box font-bold text-[#574F4D]">
+        R${convertDotToComma(price * productQuantity)}
+      </p>
     </article>
   );
 }

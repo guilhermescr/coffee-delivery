@@ -13,13 +13,13 @@ export default function Coffee({
   description,
   tags,
   price = 9.9,
-  quantity,
+  amountInStock,
 }: CoffeeInterface) {
   const [productQuantity, setProductQuantity] = useState(1);
-  const { productsData, addToCart } = useCartStore();
+  const { productsData, addToCart, setAmountOfProducts } = useCartStore();
 
   function increaseProductQuantity() {
-    if (productQuantity < quantity) {
+    if (productQuantity < amountInStock) {
       setProductQuantity(productQuantity + 1);
     }
   }
@@ -38,6 +38,7 @@ export default function Coffee({
         quantity: productQuantity,
         product: product,
       });
+      setAmountOfProducts();
     }
   }
 

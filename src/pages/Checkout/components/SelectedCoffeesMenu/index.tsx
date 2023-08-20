@@ -1,12 +1,42 @@
-import { PiTrash } from 'react-icons/pi';
+import { useState, useEffect } from 'react';
 
-import Espresso from 'src/assets/Images/coffees/expresso-tradicional.png';
+import { convertDotToComma } from 'src/utilities';
 import { useCartStore } from 'src/hooks/useCartStore';
 import SelectedCoffee from './SelectedCoffee';
-import { convertDotToComma } from 'src/utilities';
 
 export default function SelectedCoffeesMenu() {
   const { productsInCart } = useCartStore();
+  const [totalItemsPrice, setTotalItemsPrice] = useState<number>(0);
+  const [totalPrice, setTotalPrice] = useState<number>(0);
+  const shippingPrice = 5.8;
+
+  useEffect(() => {
+    getTotalPrices();
+
+    useCartStore.subscribe(() => {
+      setTimeout(getTotalPrices, 500);
+    });
+  }, []);
+
+  function getTotalPrices() {
+    let totalItemsPriceValue = getTotalItemsPrice();
+
+    setTotalItemsPrice(totalItemsPriceValue);
+    setTotalPrice(totalItemsPriceValue + shippingPrice);
+  }
+
+  function getTotalItemsPrice() {
+    const totalItemsPriceValue = [
+      ...document.querySelectorAll('.price-box'),
+    ].reduce((accumulator, priceBox) => {
+      const price = Number(
+        priceBox.innerHTML.replace('R$', '').replace(',', '.')
+      );
+      return accumulator + price;
+    }, 0);
+
+    return totalItemsPriceValue;
+  }
 
   return (
     <section className="w-full lg:w-2/3">
@@ -14,14 +44,14 @@ export default function SelectedCoffeesMenu() {
 
       <section className="bg-[#F3F2F2] rounded-tr-[2.75rem] rounded-bl-[2.75rem] rounded-s-md rounded-br-md p-6 lg:p-10">
         <section className="products">
-          {productsInCart.map(({ quantity, product }, index) => (
+          {productsInCart.map(({ product }, index) => (
             <SelectedCoffee
               key={product.id}
               id={product.id}
               imgSrc={product.coffeeSrc}
               coffeeName={product.coffeeName}
-              quantity={quantity}
-              price={convertDotToComma(product.price)}
+              amountInStock={product.amountInStock}
+              price={product.price}
               isFirstCoffee={index === 0}
             />
           ))}
@@ -30,18 +60,24 @@ export default function SelectedCoffeesMenu() {
         <section className="prices flex flex-col gap-3">
           <p className="flex items-center justify-between">
             <span className="text-sm text-[#574F4D]">Total Items</span>{' '}
-            <span className="text-[#574F4D]">R$19,80</span>
+            <span className="text-[#574F4D]">
+              R${convertDotToComma(totalItemsPrice)}
+            </span>
           </p>
 
           <p className="flex items-center justify-between">
             <span className="text-sm text-[#574F4D]">Shipping Price</span>{' '}
-            <span className="text-[#574F4D]">R$5,80</span>
+            <span className="text-[#574F4D]">
+              R${convertDotToComma(shippingPrice)}
+            </span>
           </p>
 
           <p className="flex items-center justify-between">
             <span className="text-[#403937] text-xl font-bold">Total</span>
 
-            <span className="text-[#403937] text-xl font-bold">R$25,60</span>
+            <span className="text-[#403937] text-xl font-bold">
+              R${convertDotToComma(totalPrice)}
+            </span>
           </p>
         </section>
 

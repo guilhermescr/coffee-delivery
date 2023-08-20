@@ -10,8 +10,20 @@ interface Cart {
   productsData: CoffeeInterface[];
   productsInCart: ProductInCart[];
   addToCart: (product: ProductInCart) => void;
+  setAmountOfProducts: () => void;
+  changeProductQuantity: (productId: number, isIncreaseType: boolean) => void;
   removeFromCart: (productId: number) => void;
   emptyCart: () => void;
+}
+
+export function getAmountOfProductsInCart(productsInCart: ProductInCart[]) {
+  return productsInCart.reduce((accumulator, productInCart) => {
+    return accumulator + productInCart.quantity;
+  }, 0);
+}
+
+function isProductInCart(state: Cart, productId: number): boolean {
+  return !!state.productsInCart.find(({ product: { id } }) => id === productId);
 }
 
 export const useCartStore = create<Cart>((set) => ({
@@ -20,9 +32,9 @@ export const useCartStore = create<Cart>((set) => ({
   productsInCart: [],
   addToCart: (productToBeAddedToCart: ProductInCart) => {
     set((state) => {
-      const isProductAlreadyInCart = !!state.productsInCart.find(
-        (productInCart) =>
-          productInCart.product.id === productToBeAddedToCart.product.id
+      const isProductAlreadyInCart = isProductInCart(
+        state,
+        productToBeAddedToCart.product.id
       );
 
       if (!isProductAlreadyInCart) {
@@ -32,22 +44,46 @@ export const useCartStore = create<Cart>((set) => ({
       } else {
         const updatedProductsInCart = state.productsInCart.map(
           (productInCart) => {
-            if (
-              productInCart.product.id === productToBeAddedToCart.product.id
-            ) {
+            if (isProductInCart(state, productToBeAddedToCart.product.id)) {
               return {
                 quantity:
                   productInCart.quantity + productToBeAddedToCart.quantity,
                 product: productInCart.product,
               };
-            } else {
-              return productInCart;
             }
+            return productInCart;
           }
         );
 
         return { productsInCart: updatedProductsInCart };
       }
+    });
+  },
+  setAmountOfProducts: () => {
+    set((state) => {
+      return {
+        amountOfProducts: getAmountOfProductsInCart(state.productsInCart),
+      };
+    });
+  },
+  changeProductQuantity: (productId: number, isIncreaseType: boolean) => {
+    set((state) => {
+      const updatedProductsInCart = state.productsInCart.map(
+        (productInCart) => {
+          if (productInCart.product.id === productId) {
+            const quantity = isIncreaseType
+              ? productInCart.quantity + 1
+              : productInCart.quantity - 1;
+            return {
+              quantity,
+              product: productInCart.product,
+            };
+          }
+          return productInCart;
+        }
+      );
+
+      return { productsInCart: updatedProductsInCart };
     });
   },
   removeFromCart: (productId) => {

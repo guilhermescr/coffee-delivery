@@ -5,8 +5,8 @@
     "coffeeName": "Espresso",
     "description": "Traditional coffee made with hot water and ground beans",
     "tags": ["Traditional"],
-    "price": 5.9,
-    "quantity": 99
+    "price": 5.99,
+    "amountInStock": 99
   },
   {
     "id": 2,
@@ -14,8 +14,8 @@
     "coffeeName": "American Espresso",
     "description": "Diluted espresso, less intense than the traditional one",
     "tags": ["Traditional"],
-    "price": 9.9,
-    "quantity": 99
+    "price": 9.99,
+    "amountInStock": 99
   },
   {
     "id": 3,
@@ -23,8 +23,8 @@
     "coffeeName": "Creamy Espresso",
     "description": "Traditional espresso with creamy foam",
     "tags": ["Traditional"],
-    "price": 14.9,
-    "quantity": 99
+    "price": 14.99,
+    "amountInStock": 99
   },
   {
     "id": 4,
@@ -32,8 +32,8 @@
     "coffeeName": "Iced Espresso",
     "description": "Drink prepared with espresso coffee and ice cubes",
     "tags": ["Traditional", "Iced"],
-    "price": 9.9,
-    "quantity": 99
+    "price": 15.99,
+    "amountInStock": 99
   },
   {
     "id": 5,
@@ -41,8 +41,8 @@
     "coffeeName": "Coffee With Milk",
     "description": "Half and half traditional espresso with steamed milk",
     "tags": ["Traditional", "With Milk"],
-    "price": 9.9,
-    "quantity": 99
+    "price": 14.99,
+    "amountInStock": 99
   },
   {
     "id": 6,
@@ -50,8 +50,8 @@
     "coffeeName": "Latte",
     "description": "A shot of espresso with much milk and creamy foam",
     "tags": ["Traditional", "With Milk"],
-    "price": 12.9,
-    "quantity": 99
+    "price": 13.9,
+    "amountInStock": 99
   },
   {
     "id": 7,
@@ -59,8 +59,8 @@
     "coffeeName": "Capuccino",
     "description": "Cinnamon drink made of coffee, milk and foam",
     "tags": ["Traditional", "With Milk"],
-    "price": 9.9,
-    "quantity": 99
+    "price": 11.9,
+    "amountInStock": 99
   },
   {
     "id": 8,
@@ -68,8 +68,8 @@
     "coffeeName": "Macchiato",
     "description": "Espresso coffee mixed with a little hot milk and foam",
     "tags": ["Traditional", "With Milk"],
-    "price": 9.9,
-    "quantity": 99
+    "price": 12.9,
+    "amountInStock": 99
   },
   {
     "id": 9,
@@ -77,8 +77,8 @@
     "coffeeName": "Mocaccino",
     "description": "Coffee with chocolate sauce, milk and foam",
     "tags": ["Traditional", "With Milk"],
-    "price": 9.9,
-    "quantity": 99
+    "price": 3.9,
+    "amountInStock": 99
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "description": "Chocolate dissolved in hot milk and coffee",
     "tags": ["Special", "With Milk"],
     "price": 9.9,
-    "quantity": 99
+    "amountInStock": 99
   },
   {
     "id": 11,
@@ -95,8 +95,8 @@
     "coffeeName": "Cuban",
     "description": "Iced espresso drink with rum, cream and mint",
     "tags": ["Special", "Alcoholic", "Iced"],
-    "price": 9.9,
-    "quantity": 99
+    "price": 8.9,
+    "amountInStock": 99
   },
   {
     "id": 12,
@@ -104,8 +104,8 @@
     "coffeeName": "Hawaiian",
     "description": "Sweet drink prepared with coffee and coconut milk",
     "tags": ["Special"],
-    "price": 9.9,
-    "quantity": 99
+    "price": 7.9,
+    "amountInStock": 99
   },
   {
     "id": 13,
@@ -113,8 +113,8 @@
     "coffeeName": "Arabic",
     "description": "Drink prepared with Arabic coffee beans and spices",
     "tags": ["Special"],
-    "price": 9.9,
-    "quantity": 99
+    "price": 6.9,
+    "amountInStock": 99
   },
   {
     "id": 14,
@@ -122,7 +122,7 @@
     "coffeeName": "Irish",
     "description": "Drink of coffee, Irish whiskey, sugar and whipped cream",
     "tags": ["Special", "Alcoholic"],
-    "price": 9.9,
-    "quantity": 99
+    "price": 5.9,
+    "amountInStock": 99
   }
 ]

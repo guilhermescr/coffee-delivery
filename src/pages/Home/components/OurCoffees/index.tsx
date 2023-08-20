@@ -4,10 +4,10 @@ import Coffee from './components/Coffee';
 
 import { CoffeeInterface } from 'src/interfaces/products/coffees';
 
-import coffeesData from 'src/coffees.json';
+import { useCartStore } from 'src/hooks/useCartStore';
 
 export default function OurCoffees() {
-  const coffees: CoffeeInterface[] = coffeesData;
+  const coffees: CoffeeInterface[] = useCartStore().productsData;
 
   return (
     <section>
@@ -16,8 +16,8 @@ export default function OurCoffees() {
       </h2>
 
       <section className="coffees gap-8">
-        {coffees.map((coffee, index) => (
-          <Coffee key={coffee.coffeeName + index * Math.random()} {...coffee} />
+        {coffees.map((coffee) => (
+          <Coffee key={coffee.coffeeName + coffee.id} {...coffee} />
         ))}
       </section>
     </section>
