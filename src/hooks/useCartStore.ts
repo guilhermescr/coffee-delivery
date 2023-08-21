@@ -94,6 +94,6 @@ export const useCartStore = create<Cart>((set) => ({
     }));
   },
   emptyCart: () => {
-    set({ productsInCart: [] });
+    set({ amountOfProducts: 0, productsInCart: [] });
   },
 }));

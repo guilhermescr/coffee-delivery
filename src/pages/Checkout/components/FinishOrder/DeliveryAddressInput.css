@@ -1,0 +1,14 @@
+span.optional {
+  position: relative;
+}
+
+span.optional::after {
+  color: #8d8686;
+  content: 'Optional';
+  font-size: 0.75rem;
+  font-style: italic;
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+}

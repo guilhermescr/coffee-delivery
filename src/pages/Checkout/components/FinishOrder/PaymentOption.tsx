@@ -20,6 +20,9 @@ export default function PaymentOption({
       ? 'bg-[#EBE5F9] border border-solid border-[#8047F8]'
       : 'bg-[#E6E5E5]';
 
+  const paymentNameCustomClass =
+    selectedOption === id ? 'delivery-detail-item' : '';
+
   function handleClick() {
     selectThisOption(id);
   }
@@ -31,7 +34,10 @@ export default function PaymentOption({
       onClick={handleClick}
     >
       {children}{' '}
-      <span className="inline-block ml-3 text-[#574F4D] text-xs uppercase">
+      <span
+        className={`${paymentNameCustomClass} inline-block ml-3 text-[#574F4D] text-xs uppercase`.trim()}
+        id={paymentName}
+      >
         {paymentName}
       </span>
     </button>

@@ -2,7 +2,7 @@ import DeliveryAddressInput from './DeliveryAddressInput';
 
 export default function DeliveryAddressForm() {
   return (
-    <form className="flex flex-col gap-4">
+    <form className="flex flex-col gap-4" autoComplete="off">
       <div>
         <DeliveryAddressInput
           id="postCode"
@@ -22,11 +22,16 @@ export default function DeliveryAddressForm() {
           id="complement"
           placeholder="Complement"
           width="w-full md:w-2/3"
+          isOptional={true}
         />
       </div>
 
       <div className="flex flex-col md:flex-row md:items-center gap-3">
-        <DeliveryAddressInput id="neighborhood" placeholder="Neighborhood" width='w-full md:w-auto' />
+        <DeliveryAddressInput
+          id="neighborhood"
+          placeholder="Neighborhood"
+          width="w-full md:w-auto"
+        />
 
         <DeliveryAddressInput
           id="city"

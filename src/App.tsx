@@ -4,6 +4,7 @@ import Wrapper from './components/Wrapper';
 import Header from './layouts/Header';
 import Home from './pages/Home';
 import Checkout from './pages/Checkout';
+import DeliverySuccess from './pages/DeliverySuccess';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/delivery-success" element={<DeliverySuccess />} />
       </Routes>
     </Router>
   );
