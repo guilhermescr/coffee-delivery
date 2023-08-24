@@ -1,5 +1,5 @@
 export interface DeliveryDetails {
-  postCode: string;
+  postCode: number;
   street: string;
   number: number;
   complement?: string;
@@ -16,5 +16,4 @@ export type DeliveryDetailsProps =
   | 'complement'
   | 'neighborhood'
   | 'city'
-  | 'state'
-  | 'paymentMethod';
+  | 'state';

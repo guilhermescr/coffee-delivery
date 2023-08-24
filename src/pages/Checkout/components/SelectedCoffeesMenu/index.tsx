@@ -4,11 +4,7 @@ import { convertDotToComma } from 'src/utilities';
 import { useCartStore } from 'src/hooks/useCartStore';
 import SelectedCoffee from './SelectedCoffee';
 
-type Props = {
-  handleSubmit: () => void;
-};
-
-export default function SelectedCoffeesMenu({ handleSubmit }: Props) {
+export default function SelectedCoffeesMenu() {
   const { productsInCart } = useCartStore();
   const [totalItemsPrice, setTotalItemsPrice] = useState<number>(0);
   const [totalPrice, setTotalPrice] = useState<number>(0);
@@ -85,10 +81,7 @@ export default function SelectedCoffeesMenu({ handleSubmit }: Props) {
           </p>
         </section>
 
-        <button
-          className="bg-[#DBAC2C] rounded-md uppercase text-sm font-bold text-white mt-6 py-3 px-2 w-full hover:saturate-150 active:opacity-90"
-          onClick={handleSubmit}
-        >
+        <button className="bg-[#DBAC2C] rounded-md uppercase text-sm font-bold text-white mt-6 py-3 px-2 w-full hover:saturate-150 active:opacity-90">
           Finish Order
         </button>
       </section>

@@ -22,7 +22,7 @@ export function isDeliveryDataComplete(deliveryData: DeliveryDetails): boolean {
   // "invalid is not included" means delivery data is complete
   return !deliveryDataResults.includes('invalid');
 }
-
+// come back
 export default function Checkout() {
   const navigate = useNavigate();
   const { emptyCart } = useCartStore();
@@ -36,65 +36,14 @@ export default function Checkout() {
     }
   }
 
-  function handleSubmit() {
-    const deliveryDetails: DeliveryDetails = {
-      postCode: '',
-      street: '',
-      number: 1,
-      neighborhood: '',
-      city: '',
-      state: '',
-      paymentMethod: '',
-    };
-
-    document
-      .querySelectorAll('.delivery-detail-item')
-      .forEach((deliveryDetailItem) => {
-        const deliveryDetailData: string = getElementText(deliveryDetailItem);
-
-        switch (deliveryDetailItem.id) {
-          case 'postCode':
-            deliveryDetails.postCode = deliveryDetailData;
-            break;
-          case 'street':
-            deliveryDetails.street = deliveryDetailData;
-            break;
-          case 'number':
-            deliveryDetails.number = Number(deliveryDetailData);
-            break;
-          case 'complement':
-            deliveryDetails.complement = deliveryDetailData;
-            break;
-          case 'neighborhood':
-            deliveryDetails.neighborhood = deliveryDetailData;
-            break;
-          case 'city':
-            deliveryDetails.city = deliveryDetailData;
-            break;
-          case 'state':
-            deliveryDetails.state = deliveryDetailData;
-            break;
-          default:
-            deliveryDetails.paymentMethod = deliveryDetailData;
-        }
-      });
-
-    if (isDeliveryDataComplete(deliveryDetails)) {
-      setDeliveryDetails(deliveryDetails);
-      emptyCart();
-
-      navigate('/delivery-success');
-    } else {
-      alert('You forgot to add some data in the input fields.');
-    }
-  }
+ 
 
   return (
     <Wrapper customCSS="py-10">
       <section className="flex flex-col gap-4 lg:flex-row">
         <FinishOrder />
 
-        <SelectedCoffeesMenu handleSubmit={handleSubmit} />
+        <SelectedCoffeesMenu />
       </section>
     </Wrapper>
   );
